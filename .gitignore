@@ -1,0 +1,17 @@
+__pycache__/
+*.py[oc]
+*.pyc
+build/
+dist/
+wheels/
+*.egg.info
+venv/
+.venv/
+
+*.db
+database.db
+.vscode/
+.idea/
+
+
+
