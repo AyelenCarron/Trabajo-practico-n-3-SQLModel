@@ -7,7 +7,7 @@ class Oficina(SQLModel, table= True):
     direccion: str| None = Field(default=None)    
     
     persona: List["Persona"] = Relationship(back_populates="oficina")
-    
+
 class Persona(SQLModel, table= True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(index=True)
@@ -16,4 +16,6 @@ class Persona(SQLModel, table= True):
     
     oficina_id: int | None = Field(default=None, foreign_key="oficina.id")
     oficina: Oficina| None = Relationship(back_populates="persona")
-    
+
+
+
